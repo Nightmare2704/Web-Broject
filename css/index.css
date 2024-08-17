@@ -46,5 +46,11 @@
   transition: background-color 0.3s;
 }
 .main {
-  background-color: #f5eded;
+  background-color: #55ed7d;
+  height:75vh;
+  /* width:100vw; */  
+}
+.footer{
+  background-color: red;
+  height:16vh;
 }
