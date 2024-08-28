@@ -1,0 +1,44 @@
+body {
+  padding-bottom: 1000px;
+}
+.main {
+  height: 100vh;
+  width: 100vw;
+  border: 2px solid green;
+
+  padding: 0;
+  display: grid;
+  margin-top: 10vh;
+  grid-template-columns: 500px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.big-boggz {
+  height: 300px;
+  background-color: blue;
+}
+
+/* 1   Baby Blue
+#68bbe3
+
+Blue Grotto
+#0e86d4
+
+Blue
+#055c9d
+
+Navy Blue
+#003060 */
+
+/* 2 Midnight Blue
+#145da0
+
+Dark Blue
+#0c2d48
+
+Blue
+#2e8bc0
+
+Baby Blue
+#b1d4e0 */
