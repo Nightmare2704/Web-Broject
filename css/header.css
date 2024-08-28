@@ -10,26 +10,38 @@
   background-color: rgb(98, 202, 228);
   justify-content: space-between;
   text-align: center;
-  height: 10vh;
+  height: 7vh;
   position: fixed;
+  top: 0px;
   left: 0px;
   right: 0px;
-
-  /* width:100vw; */
+  width: 100vw;
   align-items: center;
 }
 .navbar {
   display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  justify-content: space-between;
 }
-/* .navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  color: #7fa1c3;
+
+.home {
+  margin-right: 20px;
+  margin-left: 20px;
 }
-.navbar ul li a {
-  text-decoration: none;
-} */
+.contact {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.AboutUs {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .logo {
   color: #6482ad;
   text-align: center;
@@ -37,6 +49,8 @@
 }
 
 #login {
+  margin-right: 20px;
+  margin-left: 20px;
   padding: 5px 5px;
   background-color: #007bff;
   color: #fff;
@@ -45,17 +59,4 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-.main {
-  background-color: #55ed7d;
-  height: 75vh;
-  /* width:100vw; */
-}
-.footer {
-  background-color: red;
-  height: 16vh;
-}
-
-body {
-  padding-bottom: 3000px;
 }
