@@ -4,48 +4,50 @@
   /* z-index: 1; */
   /* background-color: #F5EDED; */
 }
+.main-text {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
-  background-color: rgb(98, 202, 228);
+  background-color: rgb(82, 211, 243);
   justify-content: space-between;
 
-  height: 10vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  height: 11vh;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   width: 100vw;
   align-items: center;
+  justify-content: center;
 }
-.navbar {
+.navbar-right {
   display: flex;
   position: absolute;
   right: 0;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+
+  align-items: center;
 
   justify-content: space-between;
 }
 
 .home {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .contact {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .AboutUs {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
-.logo {
-  color: #6482ad;
-  text-align: center;
-  font-family: Algerian;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #login {
@@ -59,4 +61,11 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.logo-center {
+  color: #6482ad;
+
+  font-family: Algerian;
+  vertical-align: middle;
 }
