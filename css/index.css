@@ -21,7 +21,7 @@
 .navbar {
   display: flex;
 }
-/* .navbar ul {
+.navbar ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
@@ -29,7 +29,7 @@
 }
 .navbar ul li a {
   text-decoration: none;
-} */
+}
 .logo {
   color: #6482ad;
   text-align: center;
