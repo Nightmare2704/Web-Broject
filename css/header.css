@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap");
+
 * {
   /* margin: ; */
   /* padding: 0px; */
@@ -7,6 +9,10 @@
 
 .main-text {
   color: rgb(4, 43, 102);
+  font-family: "Foldit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
   font-size: 2rem;
 }
 
@@ -37,13 +43,12 @@
 .navbar-right div a {
   text-decoration: none;
   font-size: 1.1em;
-  color:blanchedalmond;
+  color: blue;
 }
 
 .home {
   margin-right: 10px;
   margin-left: 10px;
-  
 }
 
 .contact {
@@ -72,50 +77,71 @@
 .logo-center {
   font-family: Algerian;
   vertical-align: middle;
-  color:yellow;
+  color: yellow;
 }
-#Layer_1{
-  width:1.5em;
+#Layer_1 {
+  width: 1.5em;
+  /* height: 1em; */
   display: none;
+  color: white;
+  /* fill: black; */
+  /* background-color: red; */
 }
 
-@media(max-width:900px) {
-  #Layer_1{
+@media (max-width: 1500px) {
+  #Layer_1 {
     display: inline-block;
-    position:fixed;
-    right:0px;
-    padding:1rem;
+    position: fixed;
+    left: 0px;
+    padding: 1rem;
+
+    transition: 1s;
   }
-  .main-text{
+  #Layer_1 :hover {
+    width: 1.7em;
+    fill: rgb(218, 218, 218);
+  }
+  #Layer_1 :active {
+    width: 1.7em;
+
+    fill: rgb(255, 255, 255);
+  }
+
+  .main-text {
     color: rgb(4, 43, 102);
     font-size: 1.5rem;
   }
-  .header{
+  .header {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .navbar-right{
-    display: none;
-  }
-  .navbar-right.acitve {
-    display:flex;
+
+  .navbar-right {
+    display: flex;
     position: absolute;
-    top:0;
+    top: 0;
+    left: 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    opacity: 1;
-    color:white;
-    width:100vw;
-    height:50vh;
-    background-color: black;
-    /* margin-top: 900px; */
+    opacity: 0;
+    width: 40vw;
+    height: 50vh;
 
+    background: rgba(134, 113, 252, 0.3);
+
+    border-radius: 0.5em;
+    /* margin-top: 900px; */
   }
-  .navbar-right div a{
-    color:white;
+  .navbar-right div a {
+    color: rgb(24, 255, 216);
     text-decoration: none;
+    font-weight: bold;
     font-size: 1.2rem;
+    opacity: 1;
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 }
