@@ -75,7 +75,7 @@
   color:yellow;
 }
 #Layer_1{
-  width:2em;
+  width:1.5em;
   display: none;
 }
 
@@ -84,7 +84,7 @@
     display: inline-block;
     position:fixed;
     right:0px;
-    padding:1.3em;
+    padding:1rem;
   }
   .main-text{
     color: rgb(4, 43, 102);
