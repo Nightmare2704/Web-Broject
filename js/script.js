@@ -1,10 +1,7 @@
 function login() {
   location.href = "login_signup/login.html";
 }
-function toggleSidebar() {
-  const sidebar = document.getElementsByClassName("navbar-right");
-  sidebar.classList.toggle("active");
-}
+
 let deveshBhai = true;
 document.querySelector("#Layer_1").addEventListener("click", function () {
   if (deveshBhai) {

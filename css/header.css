@@ -9,11 +9,9 @@
 
 .main-text {
   color: rgb(4, 43, 102);
-  font-family: "Foldit", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Anton", sans-serif;
   font-weight: bolder;
   font-style: normal;
-  font-size: 2rem;
 }
 
 .header {
@@ -34,16 +32,20 @@
 
 .navbar-right {
   display: flex;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 10px;
   margin-right: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  opacity: 1;
+
 }
 .navbar-right div a {
   text-decoration: none;
   font-size: 1.1em;
   color: blue;
+  z-index: 99;
 }
 
 .home {
@@ -83,7 +85,7 @@
   width: 1.5em;
   /* height: 1em; */
   display: none;
-  color: white;
+
   /* fill: black; */
   /* background-color: red; */
 }
