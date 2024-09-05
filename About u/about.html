@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Matemasie&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <link rel="stylesheet" href="/new-Project-1-/css/header.css">
-    <link rel="stylesheet" href="/new-Project-1-/css/footer.css">
-    <link rel="stylesheet" href="about.css">
-   
-</head>
-<body>
-      <!-- header -->
-      <div class="header">
-        <div class=".logo-center">
-          <h1 class="main-text">Your Care Taker</h1>
-        </div>
-        <div class="navbar-right">
-          <div class="home"><a href="/new-Project-1-/index.html">Home</a></div>
-          <div class="contact"><a href="/new-Project-1-/Contact Us/contactus.html">contact</a></div>
-          <div class="AboutUs"><a href="/new-Project-1-/About u/about.html">About Us</a></div>
-  
-          <button onclick="login()" id="login">Login</button>
-        </div>
-        <svg
-          version="1.1"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          width="122.879px"
-          height="103.609px"
-          viewBox="0 0 122.879 103.609"
-          enable-background="new 0 0 122.879 103.609"
-        >
-          <g>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"
-            />
-          </g>
-        </svg>
+    <link rel="stylesheet" href="/new-Project-1-/css/header.css" />
+    <link rel="stylesheet" href="/new-Project-1-/css/footer.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <!-- overlay -->
+    <div class="overlay"></div>
+    <!-- header -->
+    <div class="header">
+      <div class=".logo-center">
+        <h1 class="main-text">Your Care Taker</h1>
       </div>
-      <!-- About us main page -->
-       <div class="main">
-       <div class="first-section">
+      <div class="navbar-right">
+        <div class="home"><a href="/new-Project-1-/index.html">Home</a></div>
+        <div class="contact">
+          <a href="/new-Project-1-/Contact Us/contactus.html">contact</a>
+        </div>
+        <div class="AboutUs">
+          <a href="/new-Project-1-/About u/about.html">About Us</a>
+        </div>
+
+        <button onclick="login()" id="login">Login</button>
+      </div>
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="122.879px"
+        height="103.609px"
+        viewBox="0 0 122.879 103.609"
+        enable-background="new 0 0 122.879 103.609"
+      >
+        <g>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"
+          />
+        </g>
+      </svg>
+    </div>
+    <!-- About us main page -->
+    <div class="main">
+      <div class="first-section">
         <div class="cute-about">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum temporibus recusandae eius explicabo, cum dolore autem porro ut maxime nam!</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            temporibus recusandae eius explicabo, cum dolore autem porro ut
+            maxime nam!
+          </p>
         </div>
-       </div>
-       <div class="second-section">
-        <div class="image-second"><img src="images/second-image.webp" alt="Loading"></div>
-        <div class="Text-second">
-          <h2>Your care taker</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos molestias maiores voluptatem eius minima nostrum eum. Eum, deleniti non hic ipsum dicta vero cumque omnis impedit expedita magni maiores quis optio animi dolorem a asperiores labore itaque aut cupiditate quaerat numquam! Ratione totam obcaecati nostrum quisquam commodi molestiae quis excepturi.</p></div>
-       </div>
       </div>
-       <!-- About us footer  -->
-        <footer>
-          <div class="footer">
-
-          </div>
-        </footer>
-  <script src="/new-Project-1-/js/script.js"></script>
-</body>
+      <div class="second-section">
+        <div class="image-second">
+          <img src="images/second-image.webp" alt="Loading" />
+        </div>
+        <div class="Text-second">
+          <h2>Your care taker</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            molestias maiores voluptatem eius minima nostrum eum. Eum, deleniti
+            non hic ipsum dicta vero cumque omnis impedit expedita magni maiores
+            quis optio animi dolorem a asperiores labore itaque aut cupiditate
+            quaerat numquam! Ratione totam obcaecati nostrum quisquam commodi
+            molestiae quis excepturi.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- About us footer  -->
+    <footer>
+      <div class="footer"></div>
+    </footer>
+    <script src="/new-Project-1-/js/script.js"></script>
+  </body>
 </html>
