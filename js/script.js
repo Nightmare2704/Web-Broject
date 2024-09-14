@@ -32,3 +32,28 @@ document.addEventListener("keydown", function (e) {
 document.addEventListener("scroll", function () {
   if (!overlayContainsHidden) navBarRightHiddenAdd();
 });
+
+const tabs = document.querySelectorAll(".operations__tab");
+
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+document
+  .querySelector(".operations__tab--container")
+  .addEventListener("click", function (e) {
+    console.log("hello");
+
+    const clicked = e.target.closest(".operations__tab");
+    if (!clicked) return;
+    //activate tab
+    tabs.forEach((t) => t.classList.remove("operations__tab--active"));
+    clicked.classList.add("operations__tab--active");
+    //activate content area
+    tabsContent.forEach((e) =>
+      e.classList.remove("operations__content--active")
+    );
+
+    document
+      .querySelector(`.operations__content--${clicked.dataset.tab}`)
+      .classList.add("operations__content--active");
+  });
