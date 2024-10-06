@@ -20,88 +20,104 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+       <!-- JS -->
+    <script defer src="js/script.js"></script>
   </head>
   <body>
-    <!-- overlay -->
-    <div class="overlay"></div>
+   
     <!-- header -->
     <div class="header">
-  
-   <svg
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      width="122.879px"
-      height="103.609px"
-      viewBox="0 0 122.879 103.609"
-      enable-background="new 0 0 122.879 103.609"
-    >
-      <g>
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"
-        />
-      </g>
-    </svg>
+   
+      <div class="nav">  <div class="left-section"></div>
+  <div class="middle-section">
+    <div class="logo-center">
+    <h1 class="main-text">Your Care Taker</h1>
+  </div></div>
 
-      <div class="logo-center">
-        <h1 class="main-text">Your Care Taker</h1>
-      </div>
-      <div class="navbar-right hidden">
-        <div class="home"><a href="index.html">Home</a></div>
+
+  <div class="right-section ">
+    <img src="hamburger-menu.svg" class="Layer_1" alt="burgers">
+
+
+    <div class="navbar-right hidden">  
+      <div class="home"><a href="index.html">Home</a></div>
         <div class="contact">
           <a href="Contact Us/contactus.html">contact</a>
         </div>
         <div class="AboutUs"><a href="About u/about.html">About Us</a></div>
 
-        <button onclick="login()" id="login">Login</button>
-        <!-- <?xml version="1.0" encoding="utf-8"?> -->
+       <div> <button onclick="login()" id="login">Login</button></div>
+
+
+
+      
+      
       </div>
+<div class="desktop-icons">
+
+ <a class="icon home" href="index.html" class="contact icon">Home</a>
+      
+        <a  href="Contact Us/contactus.html" class="contact icon">contact</a>
+      
+     <a href="About u/about.html" class="AboutUs icon">About Us</a>
+
+ <button  onclick="login()" id="login"  class="icon">Login</button>
+</div>
+      
+
+
+
+
+  </div>
+
+</div>
+
+  
+
+      
+<div>
+  <h1 class="box-slider-heading  "> Welcome to our babe siet mf. </h1>
+        </div>   
      
     </div>
 
     <!-- main  -->
 
     <div class="section" id="section-1">
-<div>
-
-  <h1 class="slider-heading "> Welcome to our babe siet mf. </h1>
-</div>
 
 
 
-    <div class="slider">  <div class="gola">
-      <button class="book-title-btn"><p>&#x2B05</p></button>
-    </div>
 
-    <div class="big-boggz">
+    <div class="box-slider"> 
+     
+
+    <div class="big-boggz box-slide" data-slide='2' >
       <div>
         <button class="book-title-btn">
           <h2 class="book-text-boggz">get a call back?</h2>
         </button>
       </div>
     </div>
-    <div class="big-boggz1">
+    <div class="big-boggz1 box-slide  "data-slide='0'>
       <div>
         <button class="book-title-btn">
           <h2 class="book-text-boggz1">book your care taker?</h2>
         </button>
       </div>
     </div>
-    <div class="big-boggz2">
+    <div class="big-boggz2 box-slide" data-slide='1'>
       <div>
         <button class="book-title-btn">
-          <h2 class="book-text-boggz2">Sign Up</h2>
+          <h2 class="book-text-boggz2">Work for Us</h2> 
         </button>
       </div>
     </div>
-    <div class="gola1">
-      <button class="book-title-btn"><p>&#x2B95</p></button>
-    </div></div>
+   
+      <button class="box-btn box-btn--left" ><p>&#x2B05</p></button>
+    
+   
+      <button class="box-btn box-btn--right"><p>&#x2B95</p></button>
+    </div>
     </div>
 
     <div class="section" id="section-2">
@@ -204,7 +220,7 @@
     <div class="slider">
       <div class="slide slide--1">
         <div class="testimonial">
-          <h5 class="testimonial__header">Best financial decision ever!</h5>
+          <h5 class="testimonial__header">Best service ever!</h5>
           <blockquote class="testimonial__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Accusantium quas quisquam non? Quas voluptate nulla minima
@@ -215,8 +231,8 @@
           </blockquote>
           <address class="testimonial__author">
             <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-            <h6 class="testimonial__name">Aarav Lynn</h6>
-            <p class="testimonial__location">San Francisco, USA</p>
+            <h6 class="testimonial__name">Aarav bandar</h6>
+            <p class="testimonial__location">Shimla, India</p>
           </address>
         </div>
       </div>
@@ -224,7 +240,7 @@
       <div class="slide slide--2">
         <div class="testimonial">
           <h5 class="testimonial__header">
-            The last step to becoming a complete minimalist
+            Easy booking
           </h5>
           <blockquote class="testimonial__text">
             Quisquam itaque deserunt ullam, quia ea repellendus provident,
@@ -235,8 +251,8 @@
           </blockquote>
           <address class="testimonial__author">
             <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
-            <h6 class="testimonial__name">Miyah Miles</h6>
-            <p class="testimonial__location">London, UK</p>
+            <h6 class="testimonial__name">Chet Ram</h6>
+            <p class="testimonial__location">Solan, India</p>
           </address>
         </div>
       </div>
@@ -244,7 +260,7 @@
       <div class="slide slide--3">
         <div class="testimonial">
           <h5 class="testimonial__header">
-            Finally free from old-school banks
+            Finally a service i can rely on
           </h5>
           <blockquote class="testimonial__text">
             Debitis, nihil sit minus suscipit magni aperiam vel tenetur
@@ -256,8 +272,8 @@
           </blockquote>
           <address class="testimonial__author">
             <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
-            <h6 class="testimonial__name">Francisco Gomes</h6>
-            <p class="testimonial__location">Lisbon, Portugal</p>
+            <h6 class="testimonial__name">Bkchod kumar</h6>
+            <p class="testimonial__location">Delhi, India</p>
           </address>
         </div>
       </div>
@@ -274,9 +290,11 @@
     </div>
 
     <!-- footer  -->
+      <!-- overlay -->
+    <div class="overlay"></div>
 
     <div class="footer"></div>
 
-    <script src="js/script.js"></script>
+ 
   </body>
 </html>
