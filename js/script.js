@@ -1,60 +1,66 @@
 "use strict";
-
-const overlay = document.querySelector(".overlay");
-const overlayContainsHidden = overlay.classList.contains("hidden");
-
+const hamBurger = document.querySelector(".hamBurger");
 const navBarRight = document.querySelector(".navbar-right");
-const navBarRightHiddenAdd = () => navBarRight.classList.add("hidden");
-const navBarRightHiddenRemove = () => navBarRight.classList.remove("hidden");
+const section = document.querySelector(".section");
 const headerRight = document.querySelector(".right-section");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
-const navHeight = nav.getBoundingClientRect().height;
-
-function login() {
-  location.href = "login_signup/login.html";
-}
-
-let deveshBhai = true;
-document.querySelector(".Layer_1").addEventListener("click", function () {
-  navBarRight.style.transform = `translateX(${100}%)`;
-
-  if (deveshBhai) {
-    navBarRightHiddenRemove();
-    navBarRight.style.transform = `translateX(${0}%)`;
-
-    deveshBhai = false;
-  } else {
-    // navBarRightHiddenAdd();
-
-    deveshBhai = true;
-  }
-});
-
-overlay.addEventListener("click", function () {
-  if (!overlayContainsHidden) {
-    navBarRightHiddenAdd();
-  }
-});
-
-document.addEventListener("keydown", function (e) {
-  if (!overlayContainsHidden && e.key === "Escape") navBarRightHiddenAdd();
-});
-
-document.addEventListener("scroll", function () {
-  if (!overlayContainsHidden) navBarRightHiddenAdd();
-});
-
+const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+const dotContainer = document.querySelector(".dots");
 const tabs = document.querySelectorAll(".operations__tab");
 
 const tabsContainer = document.querySelector(".operations__tab--container");
 const tabsContent = document.querySelectorAll(".operations__content");
 
+const navHeight = nav.getBoundingClientRect().height;
+
+function login() {
+  location.href = "login_signup/login.html";
+} //hamburger menu
+
+const navfn = function () {
+  let deveshBhai = true;
+  hamBurger.addEventListener("click", function () {
+    hamBurger.classList.toggle("active");
+
+    if (deveshBhai) {
+      navBarRight.style.transform = `translateX(${0}%)`;
+
+      deveshBhai = false;
+    } else {
+      navBarRight.style.transform = `translateX(${100}%)`;
+      deveshBhai = true;
+    }
+  });
+
+  section.addEventListener("click", function () {
+    navBarRight.style.transform = `translateX(${100}%)`;
+    hamBurger.classList.remove("active");
+    deveshBhai = true;
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      navBarRight.style.transform = `translateX(${100}%)`;
+      hamBurger.classList.remove("active");
+      deveshBhai = true;
+    }
+  });
+
+  document.addEventListener("scroll", function () {
+    navBarRight.style.transform = `translateX(${100}%)`;
+    hamBurger.classList.remove("active");
+    deveshBhai = true;
+  });
+};
+navfn();
+//operations
 document
   .querySelector(".operations__tab--container")
   .addEventListener("click", function (e) {
-    console.log("hello");
-
     const clicked = e.target.closest(".operations__tab");
     if (!clicked) return;
     //activate tab
@@ -72,12 +78,8 @@ document
 
 //slider
 const sliders = function () {
-  const slides = document.querySelectorAll(".slide");
-  const slider = document.querySelector(".slider");
-  const btnLeft = document.querySelector(".slider__btn--left");
-  const btnRight = document.querySelector(".slider__btn--right");
-  const dotContainer = document.querySelector(".dots");
   let curSlide = 0;
+  let autoSlider;
 
   const maxSlide = slides.length;
 
@@ -136,7 +138,7 @@ const sliders = function () {
     e.key === "ArrowLeft" && preSlide();
   });
 
-  dotContainer.addEventListener("click", function (e) {
+  window.addEventListener("click", function (e) {
     if (e.target.classList.contains("dots__dot")) {
       const slide = e.target.dataset.slide;
 
@@ -144,93 +146,74 @@ const sliders = function () {
       activateDot(slide);
     }
   });
-  let isTouching = false;
+  //start auto scrolling
+  const startAutoScroll = function () {
+    autoSlider = setInterval(function () {
+      nextSlide();
+    }, 3000);
+  };
+  startAutoScroll();
+  //stop auto scrolling
+  const stopAutoScroll = function () {
+    clearInterval(autoSlider);
+  };
 
-  //touch thing not working yet
-  if (!isTouching) {
-    const autoSliderev = setInterval(function () {
-      if (curSlide === maxSlide - 1) curSlide = 0;
-      else curSlide++;
-      gotoSlide(curSlide);
-      activateDot(curSlide);
-    }, 5000);
-  }
+  slider.addEventListener("mousedown", stopAutoScroll);
+  slider.addEventListener("mouseup", startAutoScroll);
 };
 sliders();
 
-//slider-main
-
+//box slider
+let autoSlide;
+let boxCurSlide = 0;
+const nextButton = document.querySelector(".box-slider__btn--right");
+const lastButton = document.querySelector(".box-slider__btn--left");
 const boxSlides = document.querySelectorAll(".box-slide");
 const boxSlider = document.querySelector(".box-slider");
-const boxBtnLeft = document.querySelector(".box-btn--left");
-const boxBtnright = document.querySelector(".box-btn--right");
-let curBoxSlide = 0;
-
-const maxBoxSlide = boxSlides.length;
-
-const activateBox = function (slide) {
-  document
-    .querySelectorAll(".box-slide")
-    .forEach((s) => s.classList.remove("box-slide--active"));
-
-  document
-    .querySelector(`.box-slide[data-slide = '${slide}']`)
-    .classList.add("box-slide--active");
+const totalSlides = boxSlides.length;
+const updateSlides = function (boxslide) {
+  boxSlides.forEach((s, i) => {
+    const position = i - boxCurSlide;
+    s.style.transform = `translateX(${position * 150}%)`;
+    //check if the slide is in middle
+    if (position === 0) s.classList.add("center-slide");
+    else {
+      s.classList.remove("center-slide");
+    }
+  });
 };
+updateSlides();
 
-activateBox(0);
-
-const gotoBoxSlide = function (slide) {
-  boxSlides.forEach(
-    (s, i) => (s.style.transform = `translateX(${i - slide}%)`)
-  );
-};
-gotoBoxSlide(0);
-
-const nextBoxSlide = function () {
-  if (curBoxSlide === maxBoxSlide - 1) curBoxSlide = 0;
-  else curBoxSlide++;
-  gotoBoxSlide(curBoxSlide);
-  activateBox(curBoxSlide);
-};
-
-const prevBoxSlide = function () {
-  if (curBoxSlide === 0) curBoxSlide = maxBoxSlide - 1;
-  else curBoxSlide--;
-  gotoBoxSlide(curBoxSlide);
-  activateBox(curBoxSlide);
-};
-
-boxBtnright.addEventListener("click", nextBoxSlide);
-boxBtnLeft.addEventListener("click", prevBoxSlide);
-const autoSlide = setInterval(function () {
-  if (curBoxSlide === maxBoxSlide - 1) curBoxSlide = 0;
-  else curBoxSlide++;
-  gotoBoxSlide(curBoxSlide);
-  activateBox(curBoxSlide);
-}, 4000);
-
-//menu fade animation
-
-const handleHover = function (e) {
-  if (e.target.closest(".desktop-icons")) {
-    const link = e.target;
-    const siblings = link.closest(".desktop-icons").querySelectorAll(".icon");
-
-    // const logo = link.closest('img') whem u add logo
-
-    siblings.forEach((el) => {
-      if (el !== link) {
-        el.style.opacity = this;
-      }
-    });
+const nextBox = () => {
+  if (boxCurSlide < totalSlides - 1) {
+    boxCurSlide++;
+  } else {
+    boxCurSlide = 0;
   }
+  updateSlides();
 };
 
-headerRight.addEventListener("mouseover", handleHover.bind(0.5));
+const lastBox = () => {
+  if (boxCurSlide === 0) {
+    boxCurSlide = totalSlides - 1;
+  } else {
+    boxCurSlide--;
+  }
+  updateSlides();
+};
+nextButton.addEventListener("click", nextBox);
+lastButton.addEventListener("click", lastBox);
+//auto slide
+const startRollin = function () {
+  autoSlide = setInterval((s) => nextBox(), 3000);
+};
+startRollin();
 
-headerRight.addEventListener("mouseout", handleHover.bind(1));
-
+const stopRollin = function () {
+  autoSlide = clearInterval(autoSlide);
+};
+boxSlider.addEventListener("mouseover", stopRollin);
+boxSlider.addEventListener("mouseout", startRollin);
 //Sticky navigation
 // ducument.querySelector('.section-1')
 

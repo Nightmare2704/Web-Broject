@@ -28,8 +28,262 @@ h4 {
 }
 
 #section-1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #55e5ff;
+  z-index: 1;
+  position: relative;
+}
+.box-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10rem;
   height: 50rem;
   min-height: 50rem;
+  background-color: #55e5ff;
+  position: relative;
+}
+.box-slide {
+  background-color: orangered;
+  height: 25rem;
+  width: 30rem;
+  min-width: 30rem;
+  min-height: 25rem;
+  position: absolute;
+  opacity: 0.2;
+  border-radius: 3%;
+  transition-duration: 1s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1500px) {
+  .box-slide {
+    background-color: orangered;
+    height: 69%;
+    width: 22%;
+    position: absolute;
+    opacity: 1;
+    border-radius: 3%;
+    transition-duration: 1s;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
+  .box-slide.center-slide {
+    height: 69%;
+    width: 22%;
+    transform: scale(1.2); /* Make the center slide bigger */
+    opacity: 1; /* Highlight the center slide */
+  }
+}
+
+.box-slide:hover {
+  background: linear-gradient(to top left, #340bec, #18b8e0);
+}
+.box-slide1 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.box-slidecon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-maintext {
+  top: 25%;
+  font-size: 3.5rem;
+  position: absolute;
+  color: white;
+}
+
+.box-maintext-signup {
+  top: 1%;
+  font-size: 3.5rem;
+  position: absolute;
+  color: white;
+}
+
+.phone-num {
+  position: absolute;
+  top: 58%;
+
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+.phone-num:hover {
+  background: linear-gradient(to top left, #8c41ee, #59c0f0);
+}
+.phone-num-signup {
+  position: absolute;
+  top: 42%;
+
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+.enter-pass {
+  position: absolute;
+  top: 53%;
+
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+.confirm-pass {
+  position: absolute;
+  top: 64%;
+
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+.name {
+  position: absolute;
+  top: 20%;
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+
+.username {
+  position: absolute;
+  top: 31%;
+  left: 29%;
+  right: 30%;
+  height: 2.5rem;
+  width: 40%;
+  border: none;
+  border-radius: 3%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  color: black;
+  background: linear-gradient(to top left, #00eeff, #cccccc);
+}
+
+.signup-btn {
+  border-radius: 3%;
+  border: none;
+  width: 33%;
+  height: 3rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  position: absolute;
+  left: 33%;
+  right: 33%;
+  background-color: #71faf3bd;
+  color: rgb(72, 6, 255);
+
+  top: 75%;
+}
+
+.signup-btn:hover {
+  background-color: #d28ef1;
+  color: rgb(255, 255, 255);
+}
+.signup-btn:active {
+  background: linear-gradient(to top left, #7d0be7, #3db4eb);
+  color: rgb(0, 0, 0);
+  transform: translate(0.1rem, 0.1rem);
+}
+
+.callback-btn {
+  border-radius: 3%;
+  border: none;
+  width: 33%;
+  height: 3rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  position: absolute;
+  left: 33%;
+  right: 33%;
+  background-color: #71faf3bd;
+  color: rgb(72, 6, 255);
+
+  top: 69%;
+}
+.callback-btn:hover {
+  background-color: #d28ef1;
+  color: rgb(255, 255, 255);
+}
+.callback-btn:active {
+  background: linear-gradient(to top left, #7d0be7, #3db4eb);
+  color: rgb(0, 0, 0);
+  transform: translate(0.1rem, 0.1rem);
+}
+
+.box-slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  position: absolute;
+  border: none;
+  background: rgba(92, 200, 233, 0.466);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.box-slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.box-slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.box-slide.center-slide {
+  height: 69%;
+  width: 33%;
+  transform: scale(1.2); /* Make the center slide bigger */
+  opacity: 1; /* Highlight the center slide */
 }
 
 .section {
@@ -39,96 +293,19 @@ h4 {
   transition: transform 1s, opacity 1s;
 }
 
-.box-slider {
-  position: relative;
-
-  margin-left: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #55e5ff;
-  padding-bottom: 5rem;
-}
-
-.box-slider-heading {
-  background-color: #55e5ff;
-  font-size: 7rem;
-  padding: 10rem;
-}
-
 #section-2 {
   height: 33%;
 
   /* border: 2px solid green; */
   margin-left: 0;
   padding: 0;
-  display: flex;
+
   align-items: center;
   justify-content: center;
   /* margin-top: 10vh; */
   background-color: #55e5ff;
-}
-
-.big-boggz {
-  background-color: rgb(64, 232, 238);
-  margin: 2rem;
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr;
-  place-items: center;
-  width: 20%;
-  height: 15rem;
-  border: 9px;
-  border-radius: 4%;
-  border-style: double;
-  border-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-  transition: 1s;
-}
-
-.big-boggz1 {
-  background-color: rgb(64, 232, 238);
-  margin: 2rem;
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr;
-  place-items: center;
-  width: 20%;
-  height: 15rem;
-  border: 9px;
-  border-radius: 4%;
-  border-style: double;
-  border-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-  transition: 1s;
-}
-
-.big-boggz2 {
-  transition: 1s;
-
-  background-color: rgb(64, 232, 238);
-  margin: 2rem;
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: 1fr;
-  place-items: center;
-  width: 20%;
-  height: 15rem;
-  border: 9px;
-  border-radius: 4%;
-  border-style: double;
-  border-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-}
-
-.box-slide--active {
-  width: 35%;
-  height: 30rem;
-}
-
-@media (max-width: 900px) {
+  display: flex;
+  flex-direction: column;
 }
 
 /* 1   Baby Blue
@@ -154,64 +331,6 @@ Blue
 
 Baby Blue
 #b1d4e0 */
-.book-title-btn {
-  margin-top: 80%;
-  display: grid;
-
-  grid: 1fr;
-  overflow: hidden;
-  padding: 7%;
-  max-width: 8rem;
-  max-height: 7rem;
-  border-color: white;
-  place-items: center;
-  background: linear-gradient(to top left, #0cb4e77a, #1f3de6);
-
-  border-radius: 8%;
-}
-.box-btn {
-  position: absolute;
-  top: 40%;
-  z-index: 10;
-
-  border: none;
-  background: linear-gradient(to top left, #27dce97a, #2124ec);
-  font-family: inherit;
-  color: #37d66c;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-.box-btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.box-btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
-.book-text-boggz {
-  color: rgb(255, 255, 255);
-  font-size: 80%;
-}
-
-.book-text-boggz1 {
-  color: rgb(255, 255, 255);
-  font-size: 80%;
-}
-.book-text-boggz2 {
-  color: rgb(255, 255, 255);
-  font-size: 80%;
-}
-
-#section-2 {
-  display: flex;
-  flex-direction: column;
-}
 
 .section_title {
   padding: 15rem;
@@ -292,19 +411,11 @@ Baby Blue
   width: 2.75rem;
 }
 
-.footer {
-  position: relative;
-  margin-top: 40rem;
-  background: linear-gradient(to top left, #000000, #797979);
-  border-radius: 2px;
-  bottom: 0;
-  height: 30rem;
-}
-
 #section-3 {
   display: flex;
   flex-direction: column;
   background-color: #55e5ff;
+  z-index: 1;
 }
 
 .slider {
@@ -409,14 +520,4 @@ Baby Blue
   width: 6.5rem;
   border-radius: 50%;
   background-color: #83e8ec;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 0;
 }
