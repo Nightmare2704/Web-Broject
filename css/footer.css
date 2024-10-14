@@ -1,0 +1,43 @@
+.footer {
+  background-color: rgb(82, 211, 243);
+  position: relative;
+  margin-top: 40rem;
+  border-radius: 2px;
+  bottom: 0;
+  height: 30rem;
+}
+.upperfooter {
+  display: flex;
+  height: 15rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.upperfooter div h6 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.aboutinfooter {
+  font-size: 1.5em;
+  text-wrap: pretty;
+}
+.contactinfooter {
+  font-size: 1.5em;
+}
+.socialmedia {
+  font-size: 1.5em;
+}
+.socialcontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.socialmedia a img {
+  width: 4rem;
+  margin: 1rem;
+}
+.lowerfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 700;
+}

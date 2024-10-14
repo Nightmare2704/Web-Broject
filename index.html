@@ -20,234 +20,292 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <!-- JS -->
+    <script defer src="js/script.js"></script>
   </head>
   <body>
-    <!-- overlay -->
-    <div class="overlay"></div>
     <!-- header -->
     <div class="header">
-  
-   <svg
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      width="122.879px"
-      height="103.609px"
-      viewBox="0 0 122.879 103.609"
-      enable-background="new 0 0 122.879 103.609"
-    >
-      <g>
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"
-        />
-      </g>
-    </svg>
-
-      <div class="logo-center">
-        <h1 class="main-text">Your Care Taker</h1>
-      </div>
-      <div class="navbar-right hidden">
-        <div class="home"><a href="index.html">Home</a></div>
-        <div class="contact">
-          <a href="Contact Us/contactus.html">contact</a>
+      <div class="nav">
+        <div class="left-section"></div>
+        <div class="middle-section">
+          <div class="logo-center">
+            <h1 class="main-text">Your Care Taker</h1>
+          </div>
         </div>
-        <div class="AboutUs"><a href="About u/about.html">About Us</a></div>
 
-        <button onclick="login()" id="login">Login</button>
-        <!-- <?xml version="1.0" encoding="utf-8"?> -->
+        <div class="right-section">
+          <div class="hamBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="navbar-right hidden">
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="contact">
+              <a href="Contact Us/contactus.html">contact</a>
+            </div>
+            <div class="AboutUs"><a href="About u/about.html">About Us</a></div>
+
+            <div><button onclick="login()" id="login">Login</button></div>
+          </div>
+          <div class="desktop-icons">
+            <a class="icon home" href="index.html" class="contact icon">Home</a>
+
+            <a href="Contact Us/contactus.html" class="contact icon">contact</a>
+
+            <a href="About u/about.html" class="AboutUs icon">About Us</a>
+
+            <button onclick="login()" id="login" class="icon">Login</button>
+          </div>
+        </div>
       </div>
-     
+
+      <div>
+        <h1 class="hearder-heading">Welcome to our babe siet mf.</h1>
+      </div>
     </div>
 
     <!-- main  -->
 
     <div class="section" id="section-1">
-<div>
+      <div class="box-slider">
+        <div class="box-slide box-slide1" data-box_slide="0">
+          <div class="box-slidecon div1">
+            <p1 class="box-maintext">Get a call back?</p1>
+          </div>
+          <div class="box-slidecon div2">
+            <input
+              class="phone-num"
+              type="tel"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="box-slidecon div3">
+            <button class="callback-btn">get a call back</button>
+          </div>
+        </div>
+        <div class="box-slide box-slide2" data-box_slide="1">
+          <div class="box-slidecon div1">
+            <p1 class="box-maintext">BOOK NOW!</p1>
+          </div>
 
-  <h1 class="slider-heading "> Welcome to our babe siet mf. </h1>
-</div>
-
-
-
-    <div class="slider">  <div class="gola">
-      <button class="book-title-btn"><p>&#x2B05</p></button>
-    </div>
-
-    <div class="big-boggz">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz">get a call back?</h2>
-        </button>
+          <div class="box-slidecon div3">
+            <button class="callback-btn">BOOK</button>
+          </div>
+        </div>
+        <div class="box-slide box-slide3" data-box_slide="2">
+          <div class="box-slidecon div1">
+            <p1 class="box-maintext-signup">SIGN UP</p1>
+          </div>
+          <div class="box-slidecon div2">
+            <input class="name" type="tel " placeholder="Name" />
+            <input class="username" type="tel" placeholder="Username" />
+            <input class="phone-num-signup" placeholder="Contact" type="tel" />
+            <input class="enter-pass" placeholder="Password" type="tel" />
+            <input
+              class="confirm-pass"
+              placeholder="Confirm Password"
+              type="tel"
+            />
+          </div>
+          <div class="box-slidecon div3">
+            <button class="signup-btn">SUBMIT</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="big-boggz1">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz1">book your care taker?</h2>
-        </button>
-      </div>
-    </div>
-    <div class="big-boggz2">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz2">Sign Up</h2>
-        </button>
-      </div>
-    </div>
-    <div class="gola1">
-      <button class="book-title-btn"><p>&#x2B95</p></button>
-    </div></div>
+      <button class="box-slider__btn box-slider__btn--left">&larr;</button>
+      <button class="box-slider__btn box-slider__btn--right">&rarr;</button>
     </div>
 
     <div class="section" id="section-2">
-
       <div class="section_title">
-
         <h2 class="section__description">Operations</h2>
         <h3 class="section__header">
           Everything as simple as possible, but no simpler.
         </h3>
-
       </div>
 
-<div class="operations">
+      <div class="operations">
+        <div class="operations__tab--container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span> Instant callback
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span> Instant setup
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span>03</span> Instant booking
+          </button>
+        </div>
 
-<div class="operations__tab--container">
-  <button
-  class="btn operations__tab operations__tab--1 operations__tab--active"
-  data-tab="1"
->
-  <span>01</span> Instant callback
-</button>
-<button class="btn operations__tab operations__tab--2" data-tab="2">
-  <span>02</span> Instant setup
-</button>
-<button class="btn operations__tab operations__tab--3" data-tab="3">
-  <span>03</span> Instant booking
-</button>
-</div>
+        <div
+          class="operations__content operations__content--1 operations__content--active"
+        >
+          <div class="operations__icon operations__icon--1">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-upload"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Dont have an Account ? Get a free call-back, instantly! No fees, no
+            BS.
+          </h5>
+          <p class="dont-touch"></p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
 
-<div class="operations__content operations__content--1 operations__content--active"
->
-  <div class="operations__icon operations__icon--1">
-    <svg>
-      <use xlink:href="img/icons.svg#icon-upload"></use>
-    </svg>
-  </div>
-  <h5 class="operations__header">
-    Dont have an Account ? Get a free call-back, instantly! No fees, no BS.
-  </h5>
-  <p class="dont-touch"></p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
-  </p>
-</div>
-
-<div class="operations__content operations__content--2">
-  <div class="operations__icon operations__icon--2">
-    <svg>
-      <use xlink:href="img/icons.svg#icon-home"></use>
-    </svg>
-  </div>
-  <h5 class="operations__header">
-    Become a member instantly and enjoy our services, Sign up now.
-  </h5>
-  <p class="dont-touch"></p>
-  <p>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit
-    anim id est laborum.
-  </p>
-</div>
-<div class="operations__content operations__content--3">
-  <div class="operations__icon operations__icon--3">
-    <svg>
-      <use xlink:href="img/icons.svg#icon-user-x"></use>
-    </svg>
-  </div>
-  <h5 class="operations__header">
-    Book your caretaker instantly! on our site or on a call.
-  </h5>
-  <p class="dont-touch"></p>
-  <p>
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-    officia deserunt mollit anim id est laborum. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea commodo consequat.
-  </p>
-</div>
-</div>
-
-
-
-</div>
-      
-      
-<div class="section" id="section-3">
-
-  <div class="section_title">
-
-    <h2 class="section__description">NOT SURE YET?</h2>
-    <h3 class="section__header">
-      Many of our users are already making their life simpler.
-    </h3>
-
-  </div>
-
-
-  <div>
-    <div class="slider">  <div class="gola">
-      <button class="book-title-btn"><p>&#x2B05</p></button>
-    </div>
-
-    <div class="big-boggz">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz">get a call back?</h2>
-        </button>
+        <div class="operations__content operations__content--2">
+          <div class="operations__icon operations__icon--2">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-home"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Become a member instantly and enjoy our services, Sign up now.
+          </h5>
+          <p class="dont-touch"></p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="operations__content operations__content--3">
+          <div class="operations__icon operations__icon--3">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-user-x"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Book your caretaker instantly! on our site or on a call.
+          </h5>
+          <p class="dont-touch"></p>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="big-boggz1">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz1">book your care taker?</h2>
-        </button>
+
+    <div class="section" id="section-3">
+      <div class="section_title">
+        <h2 class="section__description">NOT SURE YET?</h2>
+        <h3 class="section__header">
+          Many of our users are already making their life simpler.
+        </h3>
+
+        <div class="slider">
+          <div class="slide slide--1">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Best service ever!</h5>
+              <blockquote class="testimonial__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium quas quisquam non? Quas voluptate nulla minima
+                deleniti optio ullam nesciunt, numquam corporis et asperiores
+                laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+                id alias reiciendis, perferendis facere pariatur dolore veniam
+                autem esse non voluptatem saepe provident nihil molestiae.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Aarav bandar</h6>
+                <p class="testimonial__location">Shimla, India</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--2">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Easy booking</h5>
+              <blockquote class="testimonial__text">
+                Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                laborum. Incidunt numquam perferendis veritatis neque
+                repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Illo deserunt exercitationem deleniti.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Chet Ram</h6>
+                <p class="testimonial__location">Solan, India</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--3">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                Finally a service i can rely on
+              </h5>
+              <blockquote class="testimonial__text">
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                incidunt commodi architecto numquam omnis nulla autem,
+                necessitatibus blanditiis modi similique quidem. Odio aliquam
+                culpa dicta beatae quod maiores ipsa minus consequatur error
+                sunt, deleniti saepe aliquid quos inventore sequi.
+                Necessitatibus id alias reiciendis, perferendis facere.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Bkchod kumar</h6>
+                <p class="testimonial__location">Delhi, India</p>
+              </address>
+            </div>
+          </div>
+
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
       </div>
-    </div>
-    <div class="big-boggz2">
-      <div>
-        <button class="book-title-btn">
-          <h2 class="book-text-boggz2">Sign Up</h2>
-        </button>
-      </div>
-    </div>
-    <div class="gola1">
-      <button class="book-title-btn"><p>&#x2B95</p></button>
-    </div></div>
-    </div>
-
-  </div>
-
-
-
-</div>
- 
-
     </div>
 
     <!-- footer  -->
+    <!-- overlay -->
+    <div class="overlay"></div>
+    <!-- footer  -->
 
-    <div class="footer"></div>
-
-    <script src="js/script.js"></script>
+    <div class="footer">
+      <div class="upperfooter">
+        <div class="aboutinfooter">
+          <h6>About</h6>
+          Your Care Taker. <br />Lorem ipsum dolor sit amet consectetur adip
+        </div>
+        <div class="contactinfooter">
+          <h6>Contact</h6>
+          Phone No. 9883878928 <br />
+          email. yourcaretaker@me
+        </div>
+        <div class="socialmedia">
+          <h6>Follow us on</h6>
+          <div class="socialcontainer">
+            <a href="facebook.com"
+              ><img src="logo\facebook.avif" alt="facebook"
+            /></a>
+            <a href="instagram.com"
+              ><img src="logo\instagram.avif" alt="Instagram"
+            /></a>
+            <a href="https://youtube.com"
+              ><img src="logo\youtube.avif" alt="Youtube"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="lowerfooter">&copy Your care Taker</div>
+    </div>
   </body>
 </html>
