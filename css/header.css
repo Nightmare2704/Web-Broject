@@ -181,3 +181,8 @@
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
+
+.header a{
+  text-decoration: none;
+  color:white;
+}
